@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7f2">
+    <title>活动报名表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section id="page1" class="panel">
+            <div class="eyebrow">活动报名</div>
+            <h1>活动报名表</h1>
+            <p class="intro">请填写以下资料完成报名</p>
+
+            <form id="registerForm">
+                <div class="field">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="请输入姓名" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Gmail</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@gmail.com" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="phone">电话号码</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="请输入电话号码" autocomplete="tel" required>
+                </div>
+
+                <label class="confirm">
+                    <input type="checkbox" id="confirm" required>
+                    <span>我确认以上资料正确</span>
+                </label>
+
+                <button type="submit">提交报名</button>
+                <p id="formMessage" class="message" aria-live="polite"></p>
+            </form>
+
+            <button class="secondary" id="showList" type="button">查看报名人员</button>
+        </section>
+
+        <section id="page2" class="panel" hidden>
+            <div class="eyebrow">报名名单</div>
+            <h1>报名人员名单</h1>
+            <p class="intro">所有成功报名的人员资料</p>
+
+            <div id="total" class="total">报名人数：0</div>
+            <div id="registrationList" class="registration-list"></div>
+            <p id="listMessage" class="message" aria-live="polite"></p>
+
+            <button class="secondary" id="showForm" type="button">返回报名页面</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
